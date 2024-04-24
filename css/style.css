@@ -12,7 +12,9 @@ body::before {
   pointer-events: none;
 }
 /**************************************************/
-
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
 /* accordion */
 .accordion * {
   transition: all 1s ease-out;
@@ -25,17 +27,24 @@ body::before {
   flex-direction: column;
   gap: 24px;
 }
+
 /* OPEN STATE */
 .item {
   box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
-  padding: 24px;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  column-gap: 24px;
-  /*   row-gap: 32px; */
-  align-items: center;
   border-top: 4px solid transparent;
+  padding: 14px 24px 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
+
+.item-heading {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .number,
 .text {
   font-size: 24px;
@@ -51,16 +60,16 @@ body::before {
   stroke: #087f5b;
 }
 .hidden-box {
-  grid-column: 2;
   display: grid;
   grid-template-rows: 0fr;
-  transition: all 0.5s ease-out;
-  max-height: 0;
   overflow: hidden;
+  transition: all 500ms ease-out;
 }
 .active .hidden-box {
-  max-height: 100%;
   grid-template-rows: 1fr;
+}
+.hidden-box-content {
+  overflow: hidden;
 }
 .hidden-box p {
   line-height: 1.6;
@@ -75,7 +84,7 @@ body::before {
 }
 .active.item {
   border-top: 4px solid #087f5b;
-  row-gap: 32px;
+  gap: 20px;
 }
 .active .number,
 .active .text {
