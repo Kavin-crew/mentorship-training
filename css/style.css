@@ -1,10 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --font-primary: "Barlow", sans-serif;
+  --font-secondary: "Barlow Condensed", sans-serif;
+
+  --color-white: #fff;
+  --color-black: #000;
+
+  /* grey */
+  --color-grey-1: #333;
+  --color-grey-2: #1c1c1c;
+  --color-grey-3: #707070;
+  --color-grey-4: #f4f4f4;
+  --color-grey-5: #e8e8e8;
+
+  /* blue */
+  --color-blue-1: #214a99;
+
+  /*purple*/
+  --color-purple-1: #70278a;
+}
+
 /* for development, remove once ready to deploy */
 body::before {
   content: "";
   display: block;
   width: 100%;
   height: 100%;
-  background: url(../images/screenshot.jpg) no-repeat center top;
+  background: url(/images/screenshot.png) no-repeat center top;
   position: absolute;
   top: 0;
   left: 0;
@@ -12,30 +35,158 @@ body::before {
   pointer-events: none;
 }
 /**************************************************/
+html {
+  font-size: 62.5%;
+}
 body {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: var(--font-primary);
+  color: #333;
+  line-height: 24px;
+  font-size: 1.8rem;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 /* general */
 .wrapper {
+  max-width: 1512px;
+  margin: 0 auto;
+}
+
+/* buttons */
+.btn {
+}
+.btn--primary {
+}
+.btn--secondary {
+}
+.btn--tertiary {
+}
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --font-primary: "Barlow", sans-serif;
+  --font-secondary: "Barlow Condensed", sans-serif;
+
+  --color-white: #fff;
+  --color-black: #000;
+
+  /* grey */
+  --color-grey-1: #333;
+  --color-grey-2: #1c1c1c;
+  --color-grey-3: #707070;
+  --color-grey-4: #f4f4f4;
+  --color-grey-5: #e8e8e8;
+
+  /* blue */
+  --color-blue-1: #214a99;
+
+  /*purple*/
+  --color-purple-1: #70278a;
+}
+
+/* for development, remove once ready to deploy */
+body::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(/images/screenshot.png) no-repeat center top;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  pointer-events: none;
+}
+/**************************************************/
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: var(--font-primary);
+  color: #333;
+  line-height: 24px;
+  font-size: 1.8rem;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/* general */
+.wrapper {
+  max-width: 151.2rem;
+  margin: 0 auto;
+}
+
+/* buttons */
+.btn {
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+.btn--primary {
+  color: var(--color-white);
+  background-color: var(--color-blue-1);
+}
+.btn--primary:hover {
+  background-color: var(--color-purple-1);
+}
+.btn--secondary {
+}
+.btn--tertiary {
 }
 
 /* header */
 .header {
 }
 .header__container {
+  border-bottom: 4px solid var(--color-blue-1);
+  background-color: var(--color-white);
+  min-height: 6.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
 }
 .logo {
+  max-width: 4.6rem;
+  margin-left: 8%;
+  justify-self: start;
 }
 .logo__img {
 }
 .main_nav {
+  display: flex;
+  align-items: center;
+  column-gap: 2.3rem;
+  width: 36.3%;
 }
 .main_nav__list {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+  justify-content: center;
 }
-.main_nav__list a {
+.main_nav__list a:link {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: var(--font-secondary);
+  color: inherit;
+}
+.main_nav__list a:link span {
+  font-family: "FontAwesome";
+}
+.main_nav__list a:hover {
+  text-decoration: underline;
 }
 .header__link {
+  max-width: 13.6rem;
+  min-height: 3.4rem;
+  line-height: 3.4rem;
+  font-size: 1.5rem;
 }
 /* header */
 
